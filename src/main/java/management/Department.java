@@ -8,7 +8,7 @@ import management.employees.abstractions.Employee;
 
 @SuppressWarnings("unused")
 public class Department implements Comparable<Department> {
-    private String _namebla;
+    private String _name;
     private final SortedSet<Employee> _employees = new TreeSet<>();
     private Manager _leader;
 
@@ -18,13 +18,13 @@ public class Department implements Comparable<Department> {
     }
 
     public String getName() {
-        return this._namebla;
+        return this._name;
     }
 
     public void setName(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException("Name cannot be null, empty or consists of white-spaces!");
 
-        this._namebla = name;
+        this._name = name;
     }
 
     public Manager getLeader() {
